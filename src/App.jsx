@@ -1,6 +1,13 @@
-import { useState } from 'react'
-import './App.css'
-
+import { useState, useEffect } from "react";
+import "./App.css";
+import {
+  Container,
+  Button,
+  Card,
+  CardContent,
+  CardActions,
+  Typography
+} from "@mui/material";
 
 const listQuotes = [
   {
@@ -40,10 +47,27 @@ export default function App() {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-  
+
   return (
     <>
-      
+      <Container maxWidth="sm">
+        <Typography variant="h3">Quote Generator</Typography>
+        <Card className="card-quote">
+          <CardContent>
+            <Typography variant="h6" sx={{ mt: 2 }}>
+              "{quotes.quote}"
+            </Typography>
+            <Typography variant="body1" color="text.secondary">
+              - {quotes.author}
+            </Typography>
+          </CardContent>
+          <CardActions style={{ justifyContent: "center" }}>
+            <Button variant="contained" sx={{ mt: 2 }} onClick={updateQuotes}>
+              New Quote
+            </Button>
+          </CardActions>
+        </Card>
+      </Container>
     </>
-  )
+  );
 }
