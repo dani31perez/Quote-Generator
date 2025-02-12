@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./App.css";
 import {
   Container,
   Button,
@@ -50,11 +49,11 @@ export default function App() {
 
   return (
     <>
-      <Container maxWidth="sm">
+      <Container style={{minWidth: '65vw'}}>
         <Typography variant="h3">Quote Generator</Typography>
         <Card
           style={{
-            width: "70vw",
+            width: "100%",
             boxShadow:
               "0px 6px 18px rgba(0, 0, 0, 0.15)",
             borderRadius: "12px",
