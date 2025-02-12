@@ -52,7 +52,15 @@ export default function App() {
     <>
       <Container maxWidth="sm">
         <Typography variant="h3">Quote Generator</Typography>
-        <Card className="card-quote">
+        <Card
+          style={{
+            width: "70vw",
+            boxShadow:
+              "0px 6px 18px rgba(0, 0, 0, 0.15)",
+            borderRadius: "12px",
+          }}
+          className="card-quote"
+        >
           <CardContent>
             <Typography variant="h6" sx={{ mt: 2 }}>
               "{quotes.quote}"
