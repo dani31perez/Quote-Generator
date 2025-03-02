@@ -18,4 +18,4 @@ npm i
 
 Or you can preview the project using my CodeSandbox link:
 
-https://codesandbox.io/p/sandbox/03-digital-clock-3q9tqr
+https://codesandbox.io/p/sandbox/quote-generator-hlv9fk
